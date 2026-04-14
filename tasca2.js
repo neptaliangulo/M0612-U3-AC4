@@ -3,7 +3,7 @@ const root = ReactDOM.createRoot(app);
 root.render(<SyncedInputs />);
 
 function SyncedInputs() {
-  const [text, setText] = React.useState('');  // ← estado único compartido
+  const [text, setText] = React.useState(''); 
 
   return (
     <>
@@ -14,7 +14,6 @@ function SyncedInputs() {
 }
 
 function Input({ label, value, onChange }) {
-  // ← ya NO tiene useState propio
   return (
     <label>
       {label}

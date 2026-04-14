@@ -3,19 +3,18 @@ const root = ReactDOM.createRoot(app);
 root.render(<FilterableList />);
 
 function FilterableList() {
-  const [query, setQuery] = React.useState('');  // ← sube aquí
+  const [query, setQuery] = React.useState(''); 
 
   return (
     <>
       <SearchBar query={query} onChange={setQuery} />
       <hr />
-      <List items={filterItems(foods, query)} />  {/* ← filtra aquí */}
+      <List items={filterItems(foods, query)} />  {}
     </>
   );
 }
 
 function SearchBar({ query, onChange }) {
-  // ← ya NO tiene useState propio
   return (
     <label>
       Search:{' '}
